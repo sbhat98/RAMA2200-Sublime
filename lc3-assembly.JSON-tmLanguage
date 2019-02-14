@@ -1,0 +1,39 @@
+{   "name": "RAMA2200 Assembly",
+    "scopeName": "source.s",
+    "fileTypes": ["ssraw"],
+    "patterns": [
+     	{ "match": "!.*",
+          "name": "comment.line",
+          "comment": "Comment format !"
+        },
+        { "match": "",
+          "name": "entity.name.function.reg",
+          "comment": "Register format R#"
+        },
+        { "match":  "((\s|^)([aA][dD][dD])|([nN][aA][nN][dD])|([aA][dD][dD][iI])|([lL][wW])|([sS][wW])|([bB][eE][qQ])|([bB][lL][tT])|([jJ][aA][lL][rR])|([sS][pP][oO][pP])|([iI][nN]))\s",
+          "name": "support.class.8086/8088",
+          "comment": "Opcode format"
+        },
+         { "match": "(\$zero)|(((x)|(0x))[0-9A-F]+\\s)",
+          "name": "constant.numeric.hex",
+          "comment": "Hexadecimal numbers format xFFFF"
+        },
+        { "match": "(b[01]+)\\s",
+          "name": "constant.numeric.bin",
+          "comment": "Binary numbers format b10"
+        },
+        { "match": "#?[0-9]+\\s",
+          "name": "constant.numeric.dec",
+          "comment": "Decimal numbers format #123 123"
+        },
+         { "match": "[\\w\\d]+:?",
+         "name":"markup.italic",
+          "comment": "Label format"
+        },
+        { "match": "\.(([wW][oO][rR][dD])|([hH][aA][lL][tT])|([nN][oO][oO][pP])|([lL][aA])|([eE][iI])|([dD][iI])|([rR][eE][tT][iI]))",
+          "name": "entity.name.function.directives",
+          "comment": "Directive format"
+        }
+    ],
+    "uuid": "065554b9-bd6d-42ab-bdb2-ba1327486268"
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>ssraw</string>
+	</array>
+	<key>name</key>
+	<string>RAMA2200 Assembly</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Comment format ;</string>
+			<key>match</key>
+			<string>(halt)|(la)|(noop)</string>
+			<key>name</key>
+			<string>entity.name.tag</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Comment format !</string>
+			<key>match</key>
+			<string>!.*</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Register format $v#</string>
+			<key>match</key>
+			<string>(\$at)|(\$v0)|(\$a0)|(\$a1)|(\$a2)|(\$t0)|(\$t1)|(\$t2)|(\$s0)|(\$s1)|(\$s2)|(\$k0)|(\$sp)|(\$fp)|(\$ra)</string>
+			<key>name</key>
+			<string>entity.name.function.reg</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Opcode format</string>
+			<key>match</key>
+			<string>((\s|^)([aA][dD][dD])|([nN][aA][nN][dD])|([aA][dD][dD][iI])|([lL][wW])|([sS][wW])|([bB][eE][qQ])|([bB][lL][tT])|([jJ][aA][lL][rR])|([sS][pP][oO][pP])|([iI][nN]))\s</string>
+			<key>name</key>
+			<string>support.class.8086/8088</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hexadecimal numbers format xFFFF</string>
+			<key>match</key>
+			<string>((x|(0x))[0-9A-Fa-f]+)</string>
+			<key>name</key>
+			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Binary numbers format b10</string>
+			<key>match</key>
+			<string>((b|(0b))[01]+)</string>
+			<key>name</key>
+			<string>constant.numeric.bin</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Decimal numbers format #123 123</string>
+			<key>match</key>
+			<string>(\$zero)|([0-9]+)</string>
+			<key>name</key>
+			<string>constant.numeric.dec</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Label format</string>
+			<key>match</key>
+			<string>[\w\d]+:?</string>
+			<key>name</key>
+			<string>markup.italic</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Directive format</string>
+			<key>match</key>
+			<string>(\.[wW][oO][rR][dD])</string>
+			<key>name</key>
+			<string>entity.name.function.directives</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.s</string>
+	<key>uuid</key>
+	<string>066554a9-bd6d-42ab-bdb2-ba1327486268</string>
+</dict>
+</plist>
